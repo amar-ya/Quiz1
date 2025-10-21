@@ -9,6 +9,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         // Q-1 java program that accept 3 nums from the user and print the largest number
+        System.out.println("Question 1 java program that accept 3 numbers from the user and print the largest number");
         int x,y,z;
         System.out.print("give value for the 1st number: ");
         x = input.nextInt();
@@ -26,7 +27,7 @@ public class Main {
         }
         input.nextLine();
         // Q-2 java program that accpet a String and a number from the user then print the character in given index
-
+        System.out.println("Question 2 java program that accpet a String and a number from the user then print the character in given index");
         System.out.print("please write any word you want: ");
         String word = input.nextLine();
         System.out.print("give me a number from 0 to "+(word.length()-1)+": ");
@@ -34,13 +35,14 @@ public class Main {
         System.out.println("the letter that`s in the index "+index+" is "+word.charAt(index));
 
         // Q-3 java program to enter the numbers till the user wants and at the end it should display the sum entered
+        System.out.println("Question 3 java program to enter the numbers till the user wants and at the end it should display the sum entered");
         int x3 = 0;
         String ans = "";
         for (; ;){
             System.out.print("please enter an integer value: ");
             x3 += input.nextInt();
             input.nextLine();
-            System.out.print("do you want to continue? (y/n): ");
+            System.out.print("do you want to continue? (y/yes to continue): ");
             ans = input.nextLine();
             if(ans.equals("y") || ans.equals("yes")){
 
@@ -52,6 +54,7 @@ public class Main {
 
         // Q-4 java program to find positive and negative numbers of a given array
 
+        System.out.println("Question 4 java program to find positive and negative numbers of a given array");
         int[] arr4 = {10,-21,30,31,-25};
         for (int i = 0; i<arr4.length;i++){
             if(arr4[i] > 0){
@@ -62,13 +65,15 @@ public class Main {
         }
 
         // Q-5 java program to find the shortest word of a given array
+
+        System.out.println("Question 5 java program to find the shortest word of a given array");
         String[] arr5 = {"Tuwaiq", "BootCamp", "Student","JAVA"};
-        int valueHolder = 1000;
         String shortWord = "";
-        for(int i = 0; i < arr5.length;i++){
-            if(arr5[i].length() < valueHolder){
-                valueHolder = arr5[i].length();
+        for(int i = 1; i < arr5.length;i++){
+            if(arr5[i].length() < arr5[i-1].length()){
                 shortWord = arr5[i];
+            }else{
+                shortWord = arr5[i-1];
             }
 
         }
